@@ -1,4 +1,4 @@
-use std::{env, fs, process};
+use std::{env, error::Error, fs, process};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -8,9 +8,18 @@ fn main() {
         process::exit(1);
     });
 
-    let content = fs::read_to_string(config.file_path).expect("Should be able to reed the file");
+    if let Err(e) = run(config) {
+        println!("application error: {e}");
+        process::exit(1);
+    };
+}
+
+fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    let content = fs::read_to_string(config.file_path)?;
 
     println!("{content}");
+
+    Ok(())
 }
 
 struct Config {
