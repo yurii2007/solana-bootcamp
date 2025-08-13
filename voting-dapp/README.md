@@ -1,4 +1,4 @@
-https://youtu.be/amAq-WHAFs8?t=6744
+https://youtu.be/amAq-WHAFs8?t=9204
 # voting-dapp
 
 This is a Next.js app containing:

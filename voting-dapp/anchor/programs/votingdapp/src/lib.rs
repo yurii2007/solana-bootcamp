@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H");
+declare_id!("6MVi3Z64PEZJfM5z3Vnwip1rWBbAX2uh9pCcqUy4CEYz");
 
 pub struct Test {
     pub field: u64,
